@@ -40,23 +40,6 @@ The light variant inverts the palette, using cream backgrounds with dark gray te
 
 <!-- End of previews. -->
 
-> [!NOTE]
->
-> The above screenshots utilize Tree-sitter parsers for `lua`, `luap`,
-> `comment`, `markdown`, `markdown_inline`, `mermaid`, and `latex`.
-
-The `lua` file screenshot also uses a custom query to highlight the `vim` global
-as a builtin variable rather than a constant, changing it from pink to red. If
-you want this behavior, add the following to a `queries/lua/highlights.scm` file
-in your config directory (the `extends` comment is necessary):
-
-```query
-; extends
-((identifier) @variable.builtin
-  (#eq? @variable.builtin "vim")
-  (#set! "priority" 128))
-```
-
 ## Installation
 
 Install via your favorite package manager:
